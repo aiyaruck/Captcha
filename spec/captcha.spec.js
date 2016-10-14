@@ -37,7 +37,7 @@ function leftOperator(inputLF) { // Integer Operator String
        }
    }
 }
- function righOperator(inputLF) { // Integer Operator String
+ function righOperator(inputRF) { // Integer Operator String
    this.toInteger = function() {
      if (inputRF === 0){
        return 'Zero'
