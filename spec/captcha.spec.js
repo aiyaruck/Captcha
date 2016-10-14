@@ -37,7 +37,31 @@ function leftOperator(inputLF) { // Integer Operator String
        }
    }
 }
-}
+ function righOperator(inputLF) { // Integer Operator String
+   this.toInteger = function() {
+     if (inputRF === 0){
+       return 'Zero'
+     }else if(inputRF === 1){
+       return 'One'
+     }else if(inputRF === 2){
+       return 'Two'
+     }else if(inputRF === 3){
+       return 'Three'
+     }else if(inputRF === 4){
+       return 'Four'
+     }else if(inputRF === 5){
+       return 'Five'
+     }else if(inputRF === 6){
+       return 'Six'
+     }else if(inputRF === 7){
+       return 'Seven'
+     }else if(inputRF === 8){
+       return 'Eight'
+     }else if(inputRF === 9){
+       return 'Nine'
+     }
+   }
+ }
 
 //Test Captcha
 describe("Test Operator", function() {
