@@ -26,21 +26,3 @@ else if (c===9)return '9';
 }
 
 //Test Captcha
-describe("Test Operator", function() {
-    it("inputOP = 1, Operator = +", function() {
-        var test = new Operator(1);
-        expect(test.toOperator()).toEqual('+');
-    });
-    it("inputOP = 2, Operator = -", function() {
-        var test = new Operator(2);
-        expect(test.toOperator()).toEqual('-');
-    });
-    it("inputOP = 3, Operator = *", function() {
-        var test = new Operator(3);
-        expect(test.toOperator()).toEqual('*');
-    });
-    it("inputOP = 4, Operator = /", function() {
-        var test = new Operator(4);
-        expect(test.toOperator()).toEqual('/');
-    });
-});
