@@ -1,11 +1,11 @@
 function captcha (pattern,op,lf,rh){
   this.generator = function (){
-    if (pattern === 1){
+    if (pattern === 1){ // number opetator string
       var o = new operator (op);
       var lo = new leftOperator (lf);
       var ro = new righOperator (rh);
       return lo.toInteger() + o.toOperator() + ro.toString();
-    }else if (pattern === 2){
+    }else if (pattern === 2){ //string opetator number
       var o = new operator (op);
       var lo = new leftOperator (lf);
       var ro = new righOperator (rh);
@@ -77,3 +77,15 @@ function righOperator(inputRh) { // Integer Operator String
    }
  }
 //Test Captcha
+describe("Test Captcha Application", function() {
+  describe("Captcha pattern 2",function testPattern2() {
+    it("Show Four-3,input = (2,2,3,4)",function(){ // test 1
+      var runApp = new captcha(2,2,3,4) // first nubber set pattern = 2.
+      expect(runApp.generator()).toEqual('Four' + '-' + '3')
+    });
+    it("Show Seven-1,input = (2,2,1,7)",function(){ //test 2
+      var runApp = new captcha(2,2,1,7) // first nubber set pattern = 2.
+      expect(runApp.generator()).toEqual('Seven' + '-' + '1')
+    });
+  });
+});
