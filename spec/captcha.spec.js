@@ -87,5 +87,17 @@ describe("Test Captcha Application", function() {
       var runApp = new captcha(2,2,1,7) // first nubber set pattern = 2.
       expect(runApp.generator()).toEqual('Seven' + '-' + '1')
     });
+    it("Show Two-0,input = (2,2,0,2)",function(){ //test 3
+      var runApp = new captcha(2,2,0,2) // first nubber set pattern = 2.
+      expect(runApp.generator()).toEqual('Two' + '-' + '0')
+    });
+    it("Show Six-4,input = (2,2,4,6)",function(){ //test 4
+      var runApp = new captcha(2,2,4,6) // first nubber set pattern = 2.
+      expect(runApp.generator()).toEqual('Six' + '-' + '4')
+    });
+    it("Show Eight-5,input = (2,2,5,8)",function(){ //test 5
+      var runApp = new captcha(2,2,5,8) // first nubber set pattern = 2.
+      expect(runApp.generator()).toEqual('Eight' + '-' + '5')
+    })
   });
 });
