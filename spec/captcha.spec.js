@@ -78,6 +78,28 @@ function righOperator(inputRh) { // Integer Operator String
  }
 //Test Captcha
 describe("Test Captcha Application", function() {
+  describe("Captcha pattern 1",function testPattern1() {
+    it("Show 1+Two,when input = (1,1,1,2)",function(){ // test 1
+      var runApp = new captcha(1,1,1,2) // first nubber set pattern = 1.
+      expect(runApp.generator()).toEqual('1' + '+' + 'Two')
+    });
+    it("Show 3+Two,when input = (1,3,3,2)",function(){ // test 2
+      var runApp = new captcha(1,3,3,2) // first nubber set pattern = 1.
+      expect(runApp.generator()).toEqual('3' + '*' + 'Two')
+    });
+    it("Show 4/Nine,when input = (1,4,4,9)",function(){ // test 3
+      var runApp = new captcha(1,4,4,9) // first nubber set pattern = 1.
+      expect(runApp.generator()).toEqual('4' + '/' + 'Nine')
+    });
+    it("Show 5-Seven,when input = (1,2,5,7)",function(){ // test 4
+      var runApp = new captcha(1,2,5,7) // first nubber set pattern = 1.
+      expect(runApp.generator()).toEqual('5' + '-' + 'Seven')
+    });
+    it("Show 8*Eight,when input = (1,3,8,8)",function(){ // test 5
+      var runApp = new captcha(1,3,8,8) // first nubber set pattern = 1.
+      expect(runApp.generator()).toEqual('8' + '*' + 'Eight')
+    });
+   //TestPattern2
   describe("Captcha pattern 2",function testPattern2() {
     it("Show Four-3,input = (2,2,3,4)",function(){ // test 1
       var runApp = new captcha(2,2,3,4) // first nubber set pattern = 2.
@@ -100,4 +122,5 @@ describe("Test Captcha Application", function() {
       expect(runApp.generator()).toEqual('Eight' + '-' + '5')
     })
   });
+});
 });
