@@ -30,7 +30,7 @@ function leftOperator(inputLF) { // Integer Operator String
            return '6'
        } else if (inputLF === 7) {
            return '7'
-       } else if (inputLF === 😎 {
+       } else if (inputLF === 8 {
            return '8'
        } else if (inputLF === 9) {
            return '9'
