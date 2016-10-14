@@ -1,15 +1,15 @@
 function captcha (pattern,op,lf,rh){
   this.generator = function (){
     if (pattern === 1){
-      var op = new operator (op);
-      var lo = new operator (lf);
-      var ro = new operator (rh);
-      return lo.toInteger() + op.toOperator() + ro.toString();
+      var o = new operator (op);
+      var lo = new leftOperator (lf);
+      var ro = new righOperator (rh);
+      return lo.toInteger() + o.toOperator() + ro.toString();
     }else if (pattern === 2){
-      var op = new operator (op);
-      var lo = new operator (lf);
-      var ro = new operator (rh);S
-      return ro.toString() + op.toOperator() + lo.toInteger();
+      var o = new operator (op);
+      var lo = new leftOperator (lf);
+      var ro = new righOperator (rh);
+      return ro.toString() + o.toOperator() + lo.toInteger();
     }
   }
 }
@@ -44,7 +44,7 @@ function leftOperator(inputLF) { // Integer Operator String
            return '6'
        } else if (inputLF === 7) {
            return '7'
-       } else if (inputLF === 8 {
+       } else if (inputLF === 8) {
            return '8'
        } else if (inputLF === 9) {
            return '9'
@@ -76,5 +76,4 @@ function righOperator(inputRh) { // Integer Operator String
      }
    }
  }
-
-//Test CaptchaS
+//Test Captcha
