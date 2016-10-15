@@ -15,5 +15,8 @@
     "url": "https://github.com/aiyaruck/Captcha/issues"
   },
   "homepage": "https://github.com/aiyaruck/Captcha#readme",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "jasmine": "^2.5.2"
+  }
 }
